@@ -1,0 +1,57 @@
+h1 {
+  text-align: center;
+  margin: 15px 0px 10px 0px;
+}
+
+.outerContainer {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 85vh;
+  padding-bottom: 10px;
+}
+
+.workArea {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 10px;
+}
+
+.canvasSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 10;
+  gap: 10px;
+}
+
+#toolsBottom {
+  flex-grow: 2;
+}
+
+#toolsSide {
+  flex-grow: 2;
+}
+
+#canvas {
+  flex-grow: 10;
+}
+
+#toolsSide,
+#canvas,
+#toolsBottom {
+  border: 2px solid #c7c7c7;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+footer {
+  padding-top: 10px;
+  text-align: center;
+  margin-top: auto;
+}
