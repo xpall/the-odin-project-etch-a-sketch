@@ -35,11 +35,23 @@ h1 {
 }
 
 #toolsSide {
-  flex-grow: 2;
+  flex-grow: 5;
 }
 
 #canvas {
+  height: 720px;
+  width: 700px;
   flex-grow: 10;
+  flex-wrap: wrap;
+}
+
+#actualCanvas {
+  margin: 8px auto auto auto;
+  height: 700px;
+  width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid red;
 }
 
 #toolsSide,
@@ -54,4 +66,10 @@ footer {
   padding-top: 10px;
   text-align: center;
   margin-top: auto;
+}
+
+/*  */
+
+.selectedPixel {
+  background-color: darkgrey;
 }
