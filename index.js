@@ -56,6 +56,7 @@ function resetCanvas() {
     allGrids.forEach(grid => {
       grid.style.backgroundColor = '#f0f0f0'
     });
+    currentPixel.style.backgroundColor = '#f0f0f0'
   });
 };
 
