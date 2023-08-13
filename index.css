@@ -69,6 +69,7 @@ button {
   flex-wrap: wrap;
   border: 10px solid darkgrey;
   border-radius: 10px;
+  touch-action: none;
 }
 
 #toolsSide,
