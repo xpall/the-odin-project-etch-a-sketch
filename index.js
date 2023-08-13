@@ -2,13 +2,16 @@ const actualCanvas = document.querySelector('#actualCanvas');
 const formResolution = document.querySelector('.formResolution');
 const inputResolution = document.querySelector('#inputResolution');
 const submitResolution = document.querySelector('#submitResolution');
-const colorButtons = document.querySelectorAll('#toolsSide button')
+const colorButtons = document.querySelectorAll('#toolsSide button');
+const currentPixel = document.querySelector('#currentPixel');
+const resetButton = document.querySelector('#resetButton');
 
-let currentColor = 'darkGreyPixel';
+let currentColor = 'darkgrey';
+resetCanvas();
 
 colorButtons.forEach(button => {button.addEventListener('click', e => {
   currentColor = e.target.id;
-  console.log(e.target.id)
+  currentPixel.style.backgroundColor = currentColor;
 })}
 );
 
@@ -26,8 +29,8 @@ function generateGrids(numPixel) {
     const gridDiv = document.createElement('div');
     gridDiv.classList.add((`gridPixel`));
     // gridDiv.textContent = 'o'
-    gridDiv.setAttribute('style', `height: ${calculatePixel}px; width: ${calculatePixel}px; display: flex; ; margin: 0, padding: 0; border: 0; justify-content: center; align-items: center`);
-    gridDiv.setAttribute('id', `gridPixel${i}`)
+    gridDiv.setAttribute('style', `height: ${calculatePixel}px; width: ${calculatePixel}px; display: flex; ; margin: 0, padding: 0; border: 0; justify-content: center; align-items: center; border-radius: 10%`);
+    gridDiv.id = `gridCanvasPixel${i}`
     actualCanvas.appendChild(gridDiv);
   }
   formatGridsOnHover();
@@ -35,14 +38,25 @@ function generateGrids(numPixel) {
 
 function formatGridsOnHover() {
   const gridDiv = document.querySelectorAll('.gridPixel');
-  gridDiv.forEach(grid => {grid.addEventListener('mousemove', e => {
+  gridDiv.forEach(grid => {grid.addEventListener('pointermove', e => {
     changeGridColor(e);
   })})
 };
 
 function changeGridColor(e) {
   let selectedDiv = document.querySelector(`#${e.target.id}`);
-  selectedDiv.classList.add(`${currentColor}`)
+  // console.log(e.target.id);
+  // console.log(currentColor);
+  selectedDiv.style.backgroundColor = `${currentColor}`;
+};
+
+function resetCanvas() {
+  resetButton.addEventListener('click', () => {
+    const allGrids = document.querySelectorAll('.gridPixel');
+    allGrids.forEach(grid => {
+      grid.style.backgroundColor = '#f0f0f0'
+    });
+  });
 };
 
 
