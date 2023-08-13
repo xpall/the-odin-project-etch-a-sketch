@@ -25,7 +25,7 @@ function generateGrids(numPixel) {
     let calculatePixel = (700 - 1) / numPixel
     const gridDiv = document.createElement('div');
     gridDiv.classList.add((`gridPixel`));
-    gridDiv.textContent = 'o'
+    // gridDiv.textContent = 'o'
     gridDiv.setAttribute('style', `height: ${calculatePixel}px; width: ${calculatePixel}px; display: flex; ; margin: 0, padding: 0; border: 0; justify-content: center; align-items: center`);
     gridDiv.setAttribute('id', `gridPixel${i}`)
     actualCanvas.appendChild(gridDiv);
