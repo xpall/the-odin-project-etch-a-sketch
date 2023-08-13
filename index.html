@@ -10,6 +10,17 @@
   <div class="outerContainer">
     <h1 class="inner heading">Etch-a-Sketch</h1>
     <div class="innerContainer">
+      <div id="toolsBottom">
+        <form class="formResolution">
+          <label for="resolution">Canvas Resolution: </label>
+          <input type="text" name="resolution" id="inputResolution">
+          <input type="submit" class="submit" id="submitResolution" value="Make Canvas / Reload">
+        </form>
+        <!-- <span>1</span>
+        <input type="range" class="slideRange" min="1" max="100" value="12">
+        <span>100</span> -->
+        <!-- <div class="range"></div> -->
+      </div>
       <div class="workArea">
         <div class="canvasSection">
           <div id="toolsSide">
@@ -32,17 +43,6 @@
             <div id="actualCanvas">
             </div>
           </div>
-        </div>
-        <div id="toolsBottom">
-          <form class="formResolution">
-            <label for="resolution">Canvas Resolution: </label>
-            <input type="text" name="resolution" id="inputResolution">
-            <input type="submit" class="submit" id="submitResolution" value="Make Canvas / Reload">
-          </form>
-          <!-- <span>1</span>
-          <input type="range" class="slideRange" min="1" max="100" value="12">
-          <span>100</span> -->
-          <!-- <div class="range"></div> -->
         </div>
       </div>
     </div>
