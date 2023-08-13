@@ -13,7 +13,10 @@
       <div class="workArea">
         <div class="canvasSection">
           <div id="toolsSide">
-            insert tools here
+            <div id="currentPixel"></div>
+            <button id="buttonBlack">Black</button>
+            <!-- <button id="buttonEraser">Eraser</button>
+            <button id="buttonRed">Red</button> -->
           </div>
           <div id="canvas">
             <div id="actualCanvas">
@@ -21,7 +24,15 @@
           </div>
         </div>
         <div id="toolsBottom">
-          insert more tools or options here
+          <form class="formResolution">
+            <label for="resolution">Canvas Resolution: </label>
+            <input type="text" name="resolution" id="inputResolution">
+            <input type="submit" class="submit" id="submitResolution" value="Make Canvas / Reload">
+          </form>
+          <!-- <span>1</span>
+          <input type="range" class="slideRange" min="1" max="100" value="12">
+          <span>100</span> -->
+          <!-- <div class="range"></div> -->
         </div>
       </div>
     </div>

@@ -1,11 +1,20 @@
+body {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/002/743/214/large_2x/realistic-crumpled-paper-texture-background-free-vector.jpg');
+}
+
 h1 {
   text-align: center;
   margin: 15px 0px 10px 0px;
 }
 
+button {
+  min-width: auto;
+}
+
 .outerContainer {
-  padding-left: 10%;
-  padding-right: 10%;
+  margin: 0% 5%;
+  /* padding-left: 10%;
+  padding-right: 10%; */
 }
 
 .innerContainer {
@@ -32,21 +41,28 @@ h1 {
 
 #toolsBottom {
   flex-grow: 2;
+  flex-shrink: 0;
 }
 
 #toolsSide {
-  flex-grow: 5;
+  flex-grow: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  gap: 10px;
 }
 
 #canvas {
-  height: 720px;
-  width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-grow: 10;
-  flex-wrap: wrap;
+  flex-shrink: 0;
 }
 
 #actualCanvas {
-  margin: 8px auto auto auto;
+  margin: 0;
   height: 700px;
   width: 700px;
   display: flex;
@@ -62,14 +78,43 @@ h1 {
   background-color: #f0f0f0;
 }
 
+#toolsBottom {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#toolsSide > button {
+  width: 80px;
+}
+
+#buttonBlack {
+  background-color: black;
+  color: white;
+}
+
+#currentPixel {
+  width: 80px;
+  height: 80px;
+  border: darkgrey 2px solid;
+}
+
 footer {
   padding-top: 10px;
   text-align: center;
   margin-top: auto;
 }
 
-/*  */
-
-.selectedPixel {
+.darkGreyPixel {
+  border-radius: 10%;
   background-color: darkgrey;
+}
+
+.buttonBlack {
+  border-radius: 10%;
+  background-color: black;
+}
+
+.buttonRed {
+  background-color: red;
 }
